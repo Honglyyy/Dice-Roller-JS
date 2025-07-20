@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    *{
-             padding: 0;
+   <style>
+    * {
+        padding: 0;
         margin: 0;
         box-sizing: border-box;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,29 +18,47 @@
         align-items: center;
         flex-direction: column;
         min-height: 100vh;
+        padding: 1rem;
         background: linear-gradient(to right, #d9e4f5, #f9f9f9);
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 20px;
         color: #2c3e50;
         text-align: center;
     }
 
+    .container {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     label {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #34495e;
-        margin-bottom: 10px;
     }
 
     input {
-        padding: 10px;
-        margin: 10px 5px;
-        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+        font-size: 1.1rem;
         border: 2px solid #ccc;
         border-radius: 8px;
-        transition: border-color 0.3s ease;
+        width: 100%;
+        max-width: 120px;
+        text-align: center;
     }
 
     input:focus {
@@ -49,9 +67,9 @@
     }
 
     button {
-        padding: 10px;
+        padding: 0.6rem;
         width: 100px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         background-color: #2980b9;
         color: white;
         border: none;
@@ -64,23 +82,11 @@
         background-color: #1f6391;
     }
 
-    .container {
-        margin-bottom: 20px;
-        background-color: #fff;
-        padding: 30px 40px;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
     #diceResult {
-        font-size: 1.2rem;
-        margin-top: 15px;
+        font-size: 1rem;
+        margin-top: 10px;
         color: #2d3436;
-    }
-
-    img {
-        width: 80px;
-        margin: 10px;
+        text-align: center;
     }
 
     .dice-container {
@@ -88,16 +94,41 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 600px;
     }
 
-    .input-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    img {
+        width: 60px;
     }
-    </style>
+
+    /* Responsive text and spacing */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input, button {
+            font-size: 1rem;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        img {
+            width: 80px;
+        }
+    }
+</style>
+
 </head>
 <body>
     <div class="container">
